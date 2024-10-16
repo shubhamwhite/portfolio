@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.logo-rainbow {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text 3s ease-in-out infinite;
+  }
+  
+  @keyframes rainbow-text {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+  
+.custom-h2 {
+    font-family: 'YourFontFamilyName', sans-serif; /* Replace with the actual font-family name */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  } 
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+.background-color{
+  background-color: #E4F1FF;
+}
+
+.project-bg {
+  background-color: #E4F1FF;
+}
+
+.murcury-color-bg{
+  background-color: #C2D9FF
+}
