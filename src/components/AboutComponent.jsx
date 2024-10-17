@@ -36,10 +36,11 @@ const AboutComponent = () => {
 
       {/* Centered Button */}
       <button
-        className="mt-6 px-8 py-4 text-white text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out hidden md:block" // Hide on small screens
+        className="mt-6 px-8 py-4 text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out hidden md:block" // Hide on small screens
         style={{
           fontFamily: "'Poppins', sans-serif",
-          backgroundImage: 'linear-gradient(to right, #3A1078, #1C1678)', // Gradient background
+          backgroundColor: '#F7F7F8', // Set background color
+          border: '2px solid black', // Add black border
         }}
       >
         Downloads
@@ -47,10 +48,11 @@ const AboutComponent = () => {
       
       {/* Optional: Add a mobile-specific button */}
       <button
-        className="mt-6 px-4 py-2 text-white text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out md:hidden" // Show only on small screens
+        className="mt-6 px-4 py-2 text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out md:hidden" // Show only on small screens
         style={{
           fontFamily: "'Poppins', sans-serif",
-          backgroundImage: 'linear-gradient(to right, #3A1078, #1C1678)', // Gradient background
+          backgroundColor: '#F7F7F8', // Set background color
+          border: '2px solid black', // Add black border
         }}
       >
         Downloads

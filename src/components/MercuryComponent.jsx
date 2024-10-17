@@ -8,46 +8,44 @@ const MercuryComponent = () => {
 
   useEffect(() => {
     const container = containerRef.current;
-    let lastScrollY = window.scrollY; // Track the last scroll position
+    let lastScrollY = window.scrollY; 
 
     const updateScroll = () => {
-      const deltaY = window.scrollY - lastScrollY; // Calculate scroll delta
+      const deltaY = window.scrollY - lastScrollY; 
 
-      // Update last scroll position
+      
       lastScrollY = window.scrollY;
 
-      // Animate horizontal translation based on scroll delta
-      const newTranslateX = gsap.getProperty(container, 'x') + deltaY * 0.8; // Adjust speed as needed
-      gsap.to(container, { x: newTranslateX, duration: 0, ease: 'power1.out' }); // Smooth transition
+   
+      const newTranslateX = gsap.getProperty(container, 'x') + deltaY * 0.8; 
+      gsap.to(container, { x: newTranslateX, duration: 0, ease: 'power1.out' }); 
 
-      // Reset the position if it goes past a certain threshold
       if (Math.abs(newTranslateX) >= container.scrollWidth / 10) {
-        gsap.set(container, { x: 0 }); // Reset to the start
+        gsap.set(container, { x: 0 });
       }
     };
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', updateScroll);
 
     return () => {
-      window.removeEventListener('scroll', updateScroll); // Clean up the event listener
+      window.removeEventListener('scroll', updateScroll); 
     };
   }, []); // Only run once on mount
 
   return (
-    <div className="murcury-color-bg left-0 w-full h-20 md:h-40 overflow-hidden relative border-t-2 border-gray-700 flex items-center justify-center">
+    <div className="background-color left-0 w-full h-20 md:h-40 overflow-hidden relative border-t-2 border-gray-700 flex items-center justify-center">
       <div
         ref={containerRef}
-        className="flex space-x-6 md:space-x-24" // Adjust spacing for mobile and desktop
+        className="flex space-x-6 md:space-x-24" 
         style={{
           willChange: 'transform',
           whiteSpace: 'nowrap',
           position: 'relative',
         }}
       >
-        {/* Create a repeating effect by duplicating items */}
+      
         {items.concat(items).map((item, index) => (
-          <div key={index} className="flex items-center space-x-80 sm:space-x-4"> {/* Adjust gap between text and arrow */}
+          <div key={index} className="flex items-center space-x-80 sm:space-x-4">
             <span className="text-black text-xl md:text-4xl xl:mr-16 sm:ml-4">{item}</span>
             {index < items.length * 2 - 1 && (
               <img

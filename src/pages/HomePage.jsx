@@ -11,9 +11,9 @@ const HomePage = () => {
         <NavBarComponent/>
         <AboutComponent/>
         <HeroComponent/>
-        <ProjectComponent/>
         <MercuryComponent/>
         <SkillComponent/>
+        <ProjectComponent/>
     </div>
   )
 }

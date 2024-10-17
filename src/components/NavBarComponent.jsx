@@ -10,14 +10,14 @@ const NavBarComponent = () => {
   };
 
   return (
-    <nav className="h-24 bg-gradient-to-r from-[#7752FE] to-[#1C1678] sticky top-0 z-50 flex items-center justify-between px-8 md:px-20 lg:px-40 border-b-2 border-gray-700">
-      <div className="bg-clip-text text-2xl sm:text-3xl md:text-4xl font-bold text-transparent">
-        <h1 className='text-gray-100'>
+    <nav className="h-24 bg-gradient-to-r background-color sticky top-0 z-50 flex items-center justify-between px-8 md:px-20 lg:px-40 border-b-2 border-gray-700">
+      <div className="bg-clip-text text-2xl sm:text-3xl md:text-4xl font-mono text-transparent">
+        <h1 className='text-black'>
           Shubham
         </h1> 
       </div>
 
-      <div className="text-white hidden md:flex space-x-6 sm:space-x-12 lg:space-x-20 text-base sm:text-lg lg:text-xl font-light">
+      <div className="text-black hidden md:flex space-x-6 sm:space-x-12 lg:space-x-20 text-base sm:text-lg lg:text-xl font-light">
         <a href="#home" className="hover:text-gray-600">Home</a>
         <a href="#downloads" className="hover:text-gray-600">Downloads</a>
         <a href="#projects" className="hover:text-gray-600">Projects</a>
@@ -30,7 +30,7 @@ const NavBarComponent = () => {
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
-          className="text-gray-100 hover:text-gray-100 focus:outline-none focus:text-gray-100"
+          className="text-gray-900 hover:text-gray-900 focus:outline-none focus:text-gray-900"
         >
           {isOpen ? (
             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,7 +45,7 @@ const NavBarComponent = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute mt-8 top-16 left-0 w-full py-10 px-8 project-bg flex flex-col space-y-4 text-xl font-semibold md:hidden border-b-2 border-gray-700">
+        <div className="absolute mt-8 top-16 left-0 w-full py-10 px-8 background-color flex flex-col space-y-4 text-xl font-light md:hidden border-b-2 border-gray-700">
           <a href="#home" className="hover:text-gray-600">Home</a>
           <a href="#downloads" className="hover:text-gray-600">Downloads</a>
           <a href="#projects" className="hover:text-gray-600">Projects</a>
