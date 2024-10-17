@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 .logo-rainbow {
     background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
@@ -40,7 +41,7 @@
 }
 
 .background-color{
-  background-color: #F7F7F8;
+  background-color: #FFFAE6;
 }
 
 .project-bg {
@@ -49,4 +50,8 @@
 
 .murcury-color-bg{
   background-color: #C2D9FF
+}
+
+.bordertops {
+  border: "1px solid black",
 }

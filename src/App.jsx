@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 const App = () => {
   
   return (
-    <div>  
+    <div className="scroll-smooth">  
       <HomePage/>
     </div> 
   )

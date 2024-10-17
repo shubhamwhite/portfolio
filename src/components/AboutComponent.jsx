@@ -15,7 +15,7 @@ const AboutComponent = () => {
   }, []);
 
   return (
-    <div className="px-8 md:px-20 lg:px-40 flex flex-col justify-center items-center min-h-screen background-color border-t-2 border-gray-700">
+    <div className="px-8 md:px-20 lg:px-40 flex flex-col justify-center items-center min-h-screen background-color border-t-[1px] border-gray-700">
       <h1
         ref={textRef}
         className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-center leading-snug mb-8"
@@ -25,7 +25,7 @@ const AboutComponent = () => {
         <span
           className="bg-clip-text text-transparent"
           style={{
-            backgroundImage: 'linear-gradient(to right, #0ea5e9, #6b21a8, #dc2626)',
+            backgroundImage: 'linear-gradient(to right, #FC4100, #FF9F66, #FFC55A)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}
@@ -39,8 +39,8 @@ const AboutComponent = () => {
         className="mt-6 px-8 py-4 text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out hidden md:block" // Hide on small screens
         style={{
           fontFamily: "'Poppins', sans-serif",
-          backgroundColor: '#F7F7F8', // Set background color
-          border: '2px solid black', // Add black border
+          backgroundColor: 'background-color ', // Set background color
+          border: '1px solid black', // Add black border
         }}
       >
         Downloads
@@ -51,8 +51,8 @@ const AboutComponent = () => {
         className="mt-6 px-4 py-2 text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out md:hidden" // Show only on small screens
         style={{
           fontFamily: "'Poppins', sans-serif",
-          backgroundColor: '#F7F7F8', // Set background color
-          border: '2px solid black', // Add black border
+          backgroundColor: 'background-color ', // Set background color
+          border: '1px solid black', // Add black border
         }}
       >
         Downloads

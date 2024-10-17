@@ -1,6 +1,6 @@
 import { useState } from "react";
-import leftArrow from "../assets/arrow_left.png"; // Replace with the actual path to your left arrow image
-import rightArrow from "../assets/arrow_right.png"; // Replace with the actual path to your right arrow image
+import leftArrow from "../assets/arrow-left.png"; // Replace with the actual path to your left arrow image
+import rightArrow from "../assets/arrow-right.png"; // Replace with the actual path to your right arrow image
 
 const ProjectComponent = () => {
   const cardData = [
@@ -33,7 +33,7 @@ const ProjectComponent = () => {
   };
 
   return (
-    <div className="px-8 lg:px-40 md:px-38 background-color w-full h-screen flex flex-col items-center justify-center xl:pt-90 md:pt-20 border-t-2 border-gray-700">
+    <div className="px-8 lg:px-40 md:px-38 background-color w-full h-screen flex flex-col items-center justify-center xl:pt-90 md:pt-20 border-t-[1px] border-gray-700">
       <div className="relative w-full flex items-center justify-center pb-0">
         <div className="w-full max-w-6xl h-[400px] md:h-[600px] overflow-hidden flex flex-col items-center justify-center">
           <img

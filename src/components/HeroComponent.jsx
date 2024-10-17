@@ -63,49 +63,47 @@ const HeroComponent = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row background-color">
-      {/* Left Side Content */}
-      <div className="hidden lg:flex lg:w-1/2 flex-col mt-60 px-8 md:px-20 lg:px-40" style={{ opacity: scrollEffect }}>
-        <h2 className="text-8xl font-bold custom-h2 relative">
-          <span className="relative inline-block text-white" style={{ WebkitTextStroke: '2px black' }}>
+    <div className="h-screen flex flex-col lg:flex-row background-color">
+      <div className="hidden lg:flex lg:w-1/2 flex-col mt-40 px-8 md:px-20 lg:px-40" style={{ opacity: scrollEffect }}>
+        <h2 className="text-8xl font-bold custom-h2 relative ">
+          <span className="relative inline-block text-orange-100" style={{ WebkitTextStroke: '2px black' }}>
             Hi,
-          </span> <br /> {/* Line break */}
-          My name is Shubham <br /> {/* Line break */}
+          </span> <br />
+          My name is Shubham <br />
           Panchal
         </h2>
-        <h3 className="text-4xl font-semibold mt-2">
-          I am a <span className="text-blue-600">{currentProfession}</span>
+        <h3 className="text-4xl font-semibold mt-2 text-gray-600">
+          I am a <span className="text-orange-600">{currentProfession}</span>
         </h3>
         <p className="mt-4 text-base">
           I'm passionate about bringing both the technical and visual aspects of digital products to life. 
           User experience, beautiful pixels, and writing clean, accessible, human code matter to me.
         </p>
 
-        {/* Mouse Icon with Animation */}
+       
         <div className="mt-16 flex justify-center animate-bounce" onClick={handleMouseClick}>
           <img src={mouseIcon} alt="Scroll Down" className="w-16 h-16 cursor-pointer" />
         </div>
       </div>
 
-      {/* Right Side Image and Content */}
       <div className="relative w-full lg:w-1/2 flex flex-col items-center">
         <img 
           src={profile} 
           alt="profile" 
-          className="w-48 h-48 rounded-full object-cover lg:w-full lg:h-auto lg:rounded-none mt-16 lg:mt-0"
+          className="w-48 h-48 xl:h-screen rounded-full object-cover lg:w-full lg:h-auto lg:rounded-none mt-16 lg:mt-0"
         />
 
-        {/* Text Below Image for Mobile Screens */}
+        
         <div className="flex flex-col justify-center items-center p-8 lg:hidden mt-16 text-center" style={{ opacity: scrollEffect }}>
           <h2 className="text-6xl font-bold text-black custom-h2 relative">
-            <span className="relative inline-block text-white" style={{ WebkitTextStroke: '2px black' }}>
+            <span className="relative inline-block text-orange-100" style={{ WebkitTextStroke: '2px black' }}>
               Hi,
-            </span> <br /> {/* Line break */}
-            My name is Shubham <br /> {/* Line break */}
+            </span> <br /> 
+            My name is Shubham <br />
             Panchal
           </h2>
           <h3 className="text-4xl font-semibold mt-6 text-gray-600">
-            I am a <span className="text-blue-600">{currentProfession}</span>
+            I am a <span className="text-orange-600">{currentProfession}</span>
           </h3>
           <p className="mt-6 text-base text-black">
             I'm passionate about bringing both the technical and visual aspects of digital products to life. 

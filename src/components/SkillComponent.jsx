@@ -11,18 +11,18 @@ const SkillComponent = () => {
   ];
 
   return (
-    <div className=" h-screen background-color pb-40 pt-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 px-8 md:px-20 lg:px-40 border-t-2 border-gray-700">
+    <div className=" h-screen background-color pb-40 pt-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 px-8 md:px-20 lg:px-40 border-t-[1px] border-gray-700">
       {skills.map((skill) => (
         <div
           key={skill.id}
-          className="shadow-md rounded-lg overflow-hidden flex transition-transform transform hover:scale-105"
+          className="shadow-md rounded-lg overflow-hidden flex transition-transform transform hover:scale-95"
           style={{
-            backgroundColor: "#F7F7F8", // Set background color
-            border: "2px solid black", // Add black border
+            backgroundColor: "#FFC55A", // Set background color
+            border: "1px solid black", // Add black border
           }}
         >
           <div className="p-4 w-full">
-            <h2 className="text-lg font-bold text-black">{skill.name}</h2> {/* Change text color to black */}
+            <h2 className="text-xl font-bold text-black">{skill.name}</h2> {/* Change text color to black */}
             <p className="text-black">{skill.description}</p> {/* Change text color to black */}
           </div>
         </div>

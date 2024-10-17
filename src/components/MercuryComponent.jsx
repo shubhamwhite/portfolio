@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import arrow from '../assets/pharmacy_16739781.png';
+import arrow from '../assets/medical_10928547.png';
 
 const MercuryComponent = () => {
   const containerRef = useRef(null); // Ref to the container
@@ -33,7 +33,7 @@ const MercuryComponent = () => {
   }, []); // Only run once on mount
 
   return (
-    <div className="background-color left-0 w-full h-20 md:h-40 overflow-hidden relative border-t-2 border-gray-700 flex items-center justify-center">
+    <div className="background-color left-0 w-full sm:h-28 md:h-40 overflow-hidden relative border-t-[1px] border-gray-700 flex items-center justify-center">
       <div
         ref={containerRef}
         className="flex space-x-6 md:space-x-24" 
@@ -46,7 +46,7 @@ const MercuryComponent = () => {
       
         {items.concat(items).map((item, index) => (
           <div key={index} className="flex items-center space-x-80 sm:space-x-4">
-            <span className="text-black text-xl md:text-4xl xl:mr-16 sm:ml-4">{item}</span>
+            <span className="text-black text-xl md:text-4xl xl:mr-16 sm:ml-4 xl:font-light">{item}</span>
             {index < items.length * 2 - 1 && (
               <img
                 src={arrow}

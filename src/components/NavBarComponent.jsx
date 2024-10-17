@@ -10,7 +10,7 @@ const NavBarComponent = () => {
   };
 
   return (
-    <nav className="h-24 bg-gradient-to-r background-color sticky top-0 z-50 flex items-center justify-between px-8 md:px-20 lg:px-40 border-b-2 border-gray-700">
+    <nav className="h-24 bg-gradient-to-r background-color sticky top-0 z-50 flex items-center justify-between px-8 md:px-20 lg:px-40 border-b-[1px] border-gray-700">
       <div className="bg-clip-text text-2xl sm:text-3xl md:text-4xl font-mono text-transparent">
         <h1 className='text-black'>
           Shubham
@@ -18,15 +18,14 @@ const NavBarComponent = () => {
       </div>
 
       <div className="text-black hidden md:flex space-x-6 sm:space-x-12 lg:space-x-20 text-base sm:text-lg lg:text-xl font-light">
-        <a href="#home" className="hover:text-gray-600">Home</a>
-        <a href="#downloads" className="hover:text-gray-600">Downloads</a>
-        <a href="#projects" className="hover:text-gray-600">Projects</a>
-        <a href="#skills" className="hover:text-gray-600">Skills</a>
-        <a href="#feature" className="hover:text-gray-600">Feature</a>
-        <a href="#blog" className="hover:text-gray-600">Blog</a>
-        <a href="#about" className="hover:text-gray-600">About</a>
+        <a href="#home" className="hover:text-orange-300">Home</a>
+        <a href="#downloads" className="hover:text-orange-300">Downloads</a>
+        <a href="#skills" className="hover:text-orange-300">Skills</a>
+        <a href="#projects" className="hover:text-orange-300">Projects</a>
+        <a href="#contect" className="hover:text-orange-300">Contect</a>
+        <a href="#blog" className="hover:text-orange-300">Blog</a>
+        <a href="#about" className="hover:text-orange-300">About</a>
       </div>
-
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
@@ -46,13 +45,13 @@ const NavBarComponent = () => {
 
       {isOpen && (
         <div className="absolute mt-8 top-16 left-0 w-full py-10 px-8 background-color flex flex-col space-y-4 text-xl font-light md:hidden border-b-2 border-gray-700">
-          <a href="#home" className="hover:text-gray-600">Home</a>
-          <a href="#downloads" className="hover:text-gray-600">Downloads</a>
-          <a href="#projects" className="hover:text-gray-600">Projects</a>
-          <a href="#skills" className="hover:text-gray-600">Skills</a>
-          <a href="#feature" className="hover:text-gray-600">Feature</a>
-          <a href="#blog" className="hover:text-gray-600">Blog</a>
-          <a href="#about" className="hover:text-gray-600">About</a>
+          <a href="#home" className="hover:text-orange-300">Home</a>
+          <a href="#downloads" className="hover:text-orange-300">Downloads</a>
+          <a href="#skills" className="hover:text-orange-300">Skills</a>
+          <a href="#projects" className="hover:text-orange-300">Projects</a>
+          <a href="#contect" className="hover:text-orange-300">Contect</a>
+          <a href="#blog" className="hover:text-orange-300">Blog</a>
+          <a href="#about" className="hover:text-orange-300">About</a>
         </div>
       )}
     </nav>
