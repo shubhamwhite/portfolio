@@ -25,7 +25,7 @@ const SkillComponent = () => {
 
       <div className="w-full flex justify-center mb-8">
       <p className="text-center max-w-2xl mx-auto text-gray-800 bg-gray-100 p-4 rounded-lg shadow-md mb-10">
-         😎 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+         Lorem Ipsum is simply 😎 dummy text of the printing and typesetting industry.
       </p>
       </div>
 
@@ -41,7 +41,7 @@ const SkillComponent = () => {
             }}
           >
             <div className="flex-grow">
-              <h2 className="text-xl font-bold text-black">{skill.name}</h2>
+              <h2 className="text-xl font-normal text-black">{skill.name}</h2>
               <p className="text-black">{skill.description}</p>
             </div>
           </div>
