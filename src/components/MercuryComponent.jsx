@@ -1,24 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import arrow from '../assets/medical_10928547.png';
+import arrow from '../assets/asterisk_17385171.png';
 
 const MercuryComponent = () => {
-  const containerRef = useRef(null); // Ref to the container
+  const containerRef = useRef(null); 
   const items = ['Figma', 'VsCode', 'Postman', 'RabbitMq', 'AWS', 'Ubuntu'];
 
   useEffect(() => {
     const container = containerRef.current;
-    let lastScrollY = window.scrollY; 
+    let lastScrollY = window.scrollY;
 
     const updateScroll = () => {
       const deltaY = window.scrollY - lastScrollY; 
-
-      
       lastScrollY = window.scrollY;
 
-   
       const newTranslateX = gsap.getProperty(container, 'x') + deltaY * 0.8; 
-      gsap.to(container, { x: newTranslateX, duration: 0, ease: 'power1.out' }); 
+      gsap.to(container, { x: newTranslateX, duration: 0, ease: 'power1.out' });
 
       if (Math.abs(newTranslateX) >= container.scrollWidth / 10) {
         gsap.set(container, { x: 0 });
@@ -30,10 +27,10 @@ const MercuryComponent = () => {
     return () => {
       window.removeEventListener('scroll', updateScroll); 
     };
-  }, []); // Only run once on mount
+  }, []);
 
   return (
-    <div className="background-color left-0 w-full sm:h-28 md:h-40 overflow-hidden relative border-t-[1px] border-gray-700 flex items-center justify-center">
+    <div className="left-0 w-full sm:h-28 md:h-40 overflow-hidden relative border-t-[1px] border-gray-700 flex items-center justify-center" style={{ backgroundColor: "#FEFFD2" }}>
       <div
         ref={containerRef}
         className="flex space-x-6 md:space-x-24" 
@@ -43,20 +40,23 @@ const MercuryComponent = () => {
           position: 'relative',
         }}
       >
-      
         {items.concat(items).map((item, index) => (
-          <div key={index} className="flex items-center space-x-80 sm:space-x-4">
-            <span className="text-black text-xl md:text-4xl xl:mr-16 sm:ml-4 xl:font-light">{item}</span>
+          <div 
+            key={index} 
+            className="flex items-center justify-center md:space-x-12 sm:space-x-4 sm:px-4" 
+          >
+            <span className="text-black sm:text-[20px] md:text-[40px] xl:font-light">
+              {item}
+            </span>
             {index < items.length * 2 - 1 && (
               <img
                 src={arrow}
                 alt="arrow"
-                className=" w-6 h-6 md:w-12 md:h-12" // Larger size for desktop
+                className="sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] sm:ml-4 md:ml-6" 
               />
             )}
           </div>
         ))}
-        {/* To ensure smooth transition without gaps, add a blank placeholder */}
         <div className="flex items-center">
           <span className="text-transparent xl:text-8xl">{' '}</span>
         </div>

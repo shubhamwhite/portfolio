@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import profile from '../assets/profile.jpg';
-import mouseIcon from '../assets/mouse.png'; // Import your mouse icon
+import mouseIcon from '../assets/mouse.png';
 
 const professions = [
   "web designer",
@@ -13,7 +13,7 @@ const HeroComponent = () => {
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [delay, setDelay] = useState(200);
-  const [scrollEffect, setScrollEffect] = useState(1); // State to control opacity based on scroll
+  const [scrollEffect, setScrollEffect] = useState(1); 
 
   useEffect(() => {
     const handleTypingEffect = () => {
@@ -25,12 +25,12 @@ const HeroComponent = () => {
       setCurrentProfession(updatedText);
 
       if (!isDeleting && updatedText === fullText) {
-        setDelay(1000); // Pause before deleting
+        setDelay(1000);
         setIsDeleting(true);
       } else if (isDeleting && updatedText === "") {
         setIsDeleting(false);
-        setIndex((prevIndex) => (prevIndex + 1) % professions.length); // Cycle to next profession
-        setDelay(500); // Pause before typing next profession
+        setIndex((prevIndex) => (prevIndex + 1) % professions.length);
+        setDelay(500); 
       } else {
         setDelay(isDeleting ? 100 : 200); 
       }
@@ -43,12 +43,11 @@ const HeroComponent = () => {
   // Scroll effect handling
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY; // Current scroll position
-      const maxScroll = window.innerHeight; // Maximum scroll value (height of the viewport)
+      const scrollPosition = window.scrollY; 
+      const maxScroll = window.innerHeight; 
 
-      // Calculate the opacity based on scroll position
-      const opacity = Math.max(1 - scrollPosition / maxScroll, 0); // Ensure it doesn't go below 0
-      setScrollEffect(opacity); // Update opacity state
+      const opacity = Math.max(1 - scrollPosition / maxScroll, 0); 
+      setScrollEffect(opacity); 
     };
 
     window.addEventListener('scroll', handleScroll); 
@@ -63,10 +62,10 @@ const HeroComponent = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col lg:flex-row background-color">
+    <div className="h-screen flex flex-col lg:flex-row" style={{ backgroundColor: "#FEFFD2" }}>
       <div className="hidden lg:flex lg:w-1/2 flex-col mt-40 px-8 md:px-20 lg:px-40" style={{ opacity: scrollEffect }}>
         <h2 className="text-8xl font-bold custom-h2 relative ">
-          <span className="relative inline-block text-orange-100" style={{ WebkitTextStroke: '2px black' }}>
+          <span className="relative inline-block text-white" style={{ WebkitTextStroke: '2px black' }}>
             Hi,
           </span> <br />
           My name is Shubham <br />
@@ -91,9 +90,8 @@ const HeroComponent = () => {
           src={profile} 
           alt="profile" 
           className="w-48 h-48 xl:h-screen rounded-full object-cover lg:w-full lg:h-auto lg:rounded-none mt-16 lg:mt-0"
-        />
+        /> 
 
-        
         <div className="flex flex-col justify-center items-center p-8 lg:hidden mt-16 text-center" style={{ opacity: scrollEffect }}>
           <h2 className="text-6xl font-bold text-black custom-h2 relative">
             <span className="relative inline-block text-orange-100" style={{ WebkitTextStroke: '2px black' }}>

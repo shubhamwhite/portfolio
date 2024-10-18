@@ -1,62 +1,28 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import React from 'react';
+import githubIcon from '../assets/social/git_4494683.png'; // Adjust path as necessary
+import mediumIcon from '../assets/social/medium_5968933.png'; // Adjust path as necessary
+import twitterIcon from '../assets/social/twitter_5969020.png'; // Adjust path as necessary
 
-// HeroComponent
 const AboutComponent = () => {
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    // GSAP animation for the text
-    gsap.fromTo(
-      textRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 2, ease: 'power3.out' }
-    );
-  }, []);
-
   return (
-    <div className="px-8 md:px-20 lg:px-40 flex flex-col justify-center items-center min-h-screen background-color border-t-[1px] border-gray-700">
-      <h1
-        ref={textRef}
-        className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-center leading-snug mb-8"
-        style={{ fontFamily: "'Poppins', sans-serif", lineHeight: '1.4' }}
-      >
-        The first time I got asked to speak at a conference, my gut reaction was 
-        <span
-          className="bg-clip-text text-transparent"
-          style={{
-            backgroundImage: 'linear-gradient(to right, #FC4100, #FF9F66, #FFC55A)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        > 
-          “heck no. That sounds terrifying”.
-        </span>
-      </h1>
-
-      {/* Centered Button */}
-      <button
-        className="mt-6 px-8 py-4 text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out hidden md:block" // Hide on small screens
-        style={{
-          fontFamily: "'Poppins', sans-serif",
-          backgroundColor: 'background-color ', // Set background color
-          border: '1px solid black', // Add black border
-        }}
-      >
-        Downloads
-      </button>
-      
-      {/* Optional: Add a mobile-specific button */}
-      <button
-        className="mt-6 px-4 py-2 text-lg font-semibold rounded-md hover:opacity-80 transition duration-300 ease-in-out md:hidden" // Show only on small screens
-        style={{
-          fontFamily: "'Poppins', sans-serif",
-          backgroundColor: 'background-color ', // Set background color
-          border: '1px solid black', // Add black border
-        }}
-      >
-        Downloads
-      </button>
+    <div className="flex flex-col items-center">
+        {/* Footer */}
+      <footer className="w-full bg-orange-200 text-black p-4">
+        <div className="flex justify-center items-center space-x-4">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <img src={githubIcon} alt="GitHub" className="w-8 h-8" />
+          </a>
+          <a href="https://medium.com/@yourusername" target="_blank" rel="noopener noreferrer">
+            <img src={mediumIcon} alt="Medium" className="w-8 h-8" />
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <img src={twitterIcon} alt="Twitter" className="w-8 h-8" />
+          </a>
+        </div>
+        <p className="text-center mt-2">
+          © 2019 - 2022 | Designed & coded 💙 by Shubham Panchal
+        </p>
+      </footer>
     </div>
   );
 };

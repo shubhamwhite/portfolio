@@ -23,7 +23,6 @@ const NavBarComponent = () => {
         <a href="#skills" className="hover:text-orange-300">Skills</a>
         <a href="#projects" className="hover:text-orange-300">Projects</a>
         <a href="#contect" className="hover:text-orange-300">Contect</a>
-        <a href="#blog" className="hover:text-orange-300">Blog</a>
         <a href="#about" className="hover:text-orange-300">About</a>
       </div>
       <div className="md:hidden">
@@ -50,7 +49,6 @@ const NavBarComponent = () => {
           <a href="#skills" className="hover:text-orange-300">Skills</a>
           <a href="#projects" className="hover:text-orange-300">Projects</a>
           <a href="#contect" className="hover:text-orange-300">Contect</a>
-          <a href="#blog" className="hover:text-orange-300">Blog</a>
           <a href="#about" className="hover:text-orange-300">About</a>
         </div>
       )}
