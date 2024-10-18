@@ -65,7 +65,7 @@ const HeroComponent = () => {
     <div className="h-screen flex flex-col lg:flex-row" style={{ backgroundColor: "#FEFFD2" }}>
       <div className="hidden lg:flex lg:w-1/2 flex-col mt-40 px-8 md:px-20 lg:px-40" style={{ opacity: scrollEffect }}>
         <h2 className="text-8xl font-bold custom-h2 relative ">
-          <span className="relative inline-block text-white" style={{ WebkitTextStroke: '2px black' }}>
+          <span className="relative inline-block text-black">
             Hi,
           </span> <br />
           I&apos;M Shubham <br />
