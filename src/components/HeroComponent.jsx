@@ -68,7 +68,7 @@ const HeroComponent = () => {
           <span className="relative inline-block text-white" style={{ WebkitTextStroke: '2px black' }}>
             Hi,
           </span> <br />
-          My name is Shubham <br />
+          I&apos;M Shubham <br />
           Panchal
         </h2>
         <h3 className="text-4xl font-semibold mt-2 text-gray-600">
